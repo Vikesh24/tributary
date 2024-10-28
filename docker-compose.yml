@@ -5,8 +5,10 @@ services:
     build: .
     ports:
       - "8000:8000"
+    environment:
+      FLASK_APP: entrypoint.py
 
   redis:
-    image: redis
+    image: "redis"
     ports:
       - "6379:6379"
